@@ -1,0 +1,75 @@
+---
+const steps = [
+  {
+    title: 'You open your own account',
+    description:
+      'You deposit funds into a trading account that is opened and controlled entirely by you, never by Fortitude International.',
+  },
+  {
+    title: 'We link it, not withdraw it',
+    description:
+      'Your account is linked to our master trading account, allowing our traders to trade on your behalf using an allocation structure.',
+  },
+  {
+    title: 'Trade-only access for our traders',
+    description:
+      'Our traders can place trades across linked accounts, but have no ability to withdraw, transfer, or otherwise remove funds from your account.',
+  },
+  {
+    title: 'You keep withdrawal control',
+    description:
+      'Only you can withdraw funds from your account, at any time. Your capital is never pooled into a vehicle you don’t control.',
+  },
+];
+---
+
+<section id="security" class="relative bg-ink-2 py-28">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
+      <div class="reveal order-2 lg:order-1">
+        <div class="space-y-6">
+          {steps.map((step, i) => (
+            <div class="flex gap-5 rounded-xl border border-white/10 bg-panel p-6 transition-colors hover:border-gold/30">
+              <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-gold/50 font-display text-sm text-gold">
+                {i + 1}
+              </span>
+              <div>
+                <h3 class="font-display text-lg text-paper">{step.title}</h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-ash">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          Security &amp; Control
+        </p>
+        <h2 class="text-balance font-display text-4xl font-medium leading-tight text-paper sm:text-5xl">
+          Your capital stays
+          <span class="text-gold">in your hands.</span>
+        </h2>
+        <p class="mt-6 text-balance text-lg leading-relaxed text-ash">
+          Trust is the foundation of everything we do. That's why the structure of
+          every investment is built around a simple principle: our traders can
+          trade your capital, but they can never take it.
+        </p>
+        <p class="mt-4 text-balance text-lg leading-relaxed text-ash">
+          Funds are deposited into an account that you open and control. It is then
+          linked to our main trading account so our team can execute trades on your
+          behalf. Withdrawal rights remain with you, and you alone, at all
+          times.
+        </p>
+
+        <div class="mt-8 rounded-xl border border-gold/30 bg-ink p-6">
+          <p class="font-display text-lg text-gold">No pooled custody. No exceptions.</p>
+          <p class="mt-2 text-sm leading-relaxed text-ash">
+            Your funds are never transferred into an account controlled by Fortitude
+            International or its traders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

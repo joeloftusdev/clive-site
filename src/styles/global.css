@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --color-ink: #0a0d12;
+  --color-ink-2: #10151d;
+  --color-panel: #131a24;
+  --color-panel-2: #1a222e;
+  --color-line: #26303e;
+  --color-gold: #c9a962;
+  --color-gold-light: #e3cd97;
+  --color-gold-dim: #8a7440;
+  --color-paper: #f6f4ee;
+  --color-ash: #9aa5b1;
+  --color-ash-2: #667080;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-ink);
+}
