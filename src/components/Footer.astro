@@ -1,5 +1,7 @@
 ---
 const year = new Date().getFullYear();
+// TODO: replace with the real Companies House number once known.
+const COMPANY_NUMBER = '12345678';
 ---
 
 <footer class="border-t border-white/10 bg-ink py-14">
@@ -11,7 +13,7 @@ const year = new Date().getFullYear();
             F
           </span>
           <span class="font-display text-lg text-paper">
-            Fortitude <span class="text-gold">International</span>
+            Fortitude <span class="text-gold">Endeavours</span>
           </span>
         </a>
         <p class="mt-4 text-sm leading-relaxed text-ash-2">
@@ -41,11 +43,11 @@ const year = new Date().getFullYear();
           <p class="text-xs font-semibold uppercase tracking-wide text-ash-2">Contact</p>
           <ul class="mt-4 space-y-2.5 wrap-break-word text-sm text-ash">
             <li>
-              <a href="mailto:contact@fortitudeinternational.com" class="hover:text-gold">
-                contact@fortitudeinternational.com
+              <a href="mailto:contact@fortitudeendeavours.com" class="hover:text-gold">
+                contact@fortitudeendeavours.com
               </a>
             </li>
-            <li>fortitudeinternational.com</li>
+            <li>fortitudeendeavours.com</li>
           </ul>
         </div>
       </div>
@@ -53,12 +55,16 @@ const year = new Date().getFullYear();
 
     <div class="mt-12 border-t border-white/10 pt-8">
       <p class="text-xs leading-relaxed text-ash-2">
-        &copy; {year} Fortitude International. All rights reserved. Trading forex,
+        &copy; {year} Fortitude Endeavours. All rights reserved. Trading forex,
         commodities and derivatives carries a high level of risk and may not be
         suitable for all investors. Property development returns are not
         guaranteed. Past performance, including results published on myfxbook, is
         not indicative of future results. Nothing on this website constitutes
         financial advice.
+      </p>
+      <p class="mt-3 text-xs leading-relaxed text-ash-2">
+        Fortitude Endeavours is registered in England and Wales under company
+        number {COMPANY_NUMBER}.
       </p>
     </div>
   </div>
