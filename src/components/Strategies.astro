@@ -6,15 +6,18 @@ const strategies = [
     tag: 'Higher risk / higher potential return',
     title: 'Forex & Commodity Trading',
     description:
-      'Our traders bring significant experience managing large funds across global currency and commodity markets. Every position is placed with discipline, and every trade, win or lose, is reported openly from the day the fund began.',
+      "We supply the buy and sell signals from the same 11-month period that more than doubled the initial investment. Choose your own exchange, decide how much to trade and at what leverage, and every signal is sent straight to your mobile so you're free to place and close the trade yourself. Prefer a hands-off approach? Send us your details and our regulated partner will contact you and take you through compliance to make sure you're suited to this type of trading and its risks.",
     points: [
-      'Managed by experienced professional traders',
-      'Full, trade-by-trade transparency from inception',
-      'Live, independently hosted performance reporting',
+      'Buy and sell signals from the 11-month period that more than doubled the initial investment',
+      'You choose the exchange, trade size and leverage — signals sent straight to your mobile',
+      'Monthly subscription for the signal service, cancel any time',
+      'Or let our regulated partner place the trades for you, after a compliance and suitability review',
     ],
     image: 'https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1200&q=80',
     alt: 'Trading desk with multiple screens showing market charts',
-    cta: { label: 'View Live Results', href: 'https://www.myfxbook.com/members/BrownArmadillo/brown-armadillo/12140477', external: true },
+    ctas: [
+      { label: 'View Live Results', href: 'https://www.myfxbook.com/members/BrownArmadillo/brown-armadillo/12140477', external: true },
+    ],
   },
   {
     tag: 'Lower risk / steadier, more modest return',
@@ -29,7 +32,9 @@ const strategies = [
     ],
     image: propertyImage.src,
     alt: 'New homes development under construction with a sold sign in the foreground',
-    cta: { label: 'Enquire About This Track', href: '#contact', external: false },
+    ctas: [
+      { label: 'Enquire About This Track', href: '#contact', external: false },
+    ],
   },
 ];
 ---
@@ -76,17 +81,21 @@ const strategies = [
                 </li>
               ))}
             </ul>
-            <a
-              href={s.cta.href}
-              target={s.cta.external ? '_blank' : undefined}
-              rel={s.cta.external ? 'noopener noreferrer' : undefined}
-              class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-light"
-            >
-              {s.cta.label}
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
+            <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              {s.ctas.map((cta) => (
+                <a
+                  href={cta.href}
+                  target={cta.external ? '_blank' : undefined}
+                  rel={cta.external ? 'noopener noreferrer' : undefined}
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-light"
+                >
+                  {cta.label}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       ))}
